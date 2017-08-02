@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.admin.layoutsandveiws.MainActivity">
+
+    <EditText
+
+        android:inputType="number"
+        android:id="@+id/etNumber1"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height= "wrap_content"/>
+    <EditText
+
+        android:layout_toRightOf="@+id/etNumber1"
+        android:inputType="number"
+        android:id="@+id/etNumber2"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height= "wrap_content"/>
+
+    <Button
+
+        android:layout_toEndOf="@+id/etNumber2"
+        android:layout_toRightOf="@+id/etNumber2"
+        android:layout_weight="2"
+        android:text="DoMagic"
+        android:id="@+id/btnDoMage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <TextView
+        android:layout_below="@id/btnDoMage"
+        android:layout_toRightOf="@id/etNumber2"
+        android:id="@+id/tvName"
+        android:textSize="20dp"
+        android:text="@string/hello"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/llimage"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvName">
+
+            <!--<ImageVeiw
+            android:id="@+id/imgMain"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/tvName"
+            />-->
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llimage"
+        android:onClick="goToActivity"/>
+
+    <LinearLayout
+        android:layout_below="@id/btnSecond"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientaion="vertical">
+
+        <TextVeiw
+            android:text="Passing an object to the second activity"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+
+</RelativeLayout>
